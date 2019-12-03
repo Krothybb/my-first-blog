@@ -26,6 +26,8 @@ SECRET_KEY = 'gqk&ww(#77k(yp*2tjg^_(9)!6-rt7o_(@hltx07i&9vq8ungr'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -37,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -119,3 +124,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+CRISPY_TEMPLATE_PACK="bootstrap3"
